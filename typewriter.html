@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TypeWriter</h1>
+    <button onclick="typing()">Click me</button>
+    <p id="writing"></p>   
+    
+    <script>
+        var i=0;
+        var text = "Hello my name is devnandan yadav a data science enthusiasts and a keen learner,Loves to code everyday building and designing web pages and apps are my personal interests ";
+
+        function typing(){
+            if(i<text.length){     //
+                document.getElementById('writing').innerHTML += text.charAt(i);
+                // document.getElementById('writing').style.color = "red"
+                // document.getElementById('writing').style.backgroundColor = "whitesmoke"
+                i++; 
+            }
+            setTimeout(typing,50)
+        }
+
+    </script>
+</body>
+</html>

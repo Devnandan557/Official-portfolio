@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dice game</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="dice.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>JavaScript Dice Game</h1>
+            <h2>Rules</h2>
+            <ul>
+                <li>By clicking the button click here both the players will throw their respective dices</li>
+                <li>The player which gets highest number will be the winner and other will be the loser</li>
+                <li>If both players have the same nos in their dices then the match draws there/</li>
+            </ul>
+            <div class="dice">
+                <p>Player 1</p>
+                <img src="images/dice1.png" id="check1" > 
+            </div>
+            <div class="dice">
+                <p>Player 2</p>
+                <img src="images/dice2.png" id="check2">  
+            </div>
+            <div>
+                <button  type="button" onclick="result()">Show results</button>
+            </div>
+        </div>
+        <script>
+            function result(){
+            const playerOne = Math.floor(Math.random() * 6) + 1;   // +1 to print all nos of a dice otherwise it will only print the odd nos.
+            
+            const playOneDice = `images/dice${playerOne}.png`;
+            document.getElementById('check1').setAttribute('src',playOneDice);
+
+            const playerTwo = Math.floor(Math.random() * 6) + 1;
+            const playerTwoDice = `images/dice${playerTwo}.png`;
+            document.getElementById('check2').setAttribute('src',playerTwoDice);
+         
+            if(playerOne > playerTwo){
+                document.querySelector('h1').innerHTML = "Player1 wwins";
+            }
+            else if(playerTwo > playerOne){
+                document.querySelector('h1').innerHTML = "player2 wins";
+            }
+            else{
+                document.querySelector('h1').innerHTML = "draw";
+            }
+            }
+          
+
+            
+        </script>
+        
+    </body>
+</html>

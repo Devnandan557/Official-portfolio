@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dice game</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="dice1.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>JavaScript Dice Game</h1>
+            <h2>Refresh the page everytime to play again</h2>
+            <h2>Rules</h2>
+            <ul>
+                <li>By clicking the button click here both the players will throw their respective dices</li>
+                <li>The player which gets highest number will be the winner and other will be the loser</li>
+                <li>If both players have the same nos in their dices then the match draws there/</li>
+            </ul>
+            <div class="dice">
+                <p>Player 1</p>
+                <img src="images/dice1.png" id="check1" > 
+                <button type="button" id="player-One">Player1</button>
+            </div>
+            <div class="dice">
+                <p>Player 2</p>
+                <img src="images/dice2.png" id="check2">
+                <button type="button" id="player-Two">Player2</button>  
+            </div>
+            <div>
+                <button  type="button" id="show-results">Show results</button>
+            </div>
+        </div>
+        <script>
+            var playerOne = Math.floor(Math.random() * 6) + 1;
+            var playerTwo = Math.floor(Math.random() * 6) + 1;
+            var playOneDice = `images/dice${playerOne}.png`;
+            var playerTwoDice = `images/dice${playerTwo}.png`;
+
+        document.getElementById('player-One').addEventListener('click',function(){
+            // const playerOne = Math.floor(Math.random() * 6) + 1;
+            // const playOneDice = `images/dice${playerOne}.png`;
+            document.getElementById('check1').setAttribute('src',playOneDice);
+        });
+        
+        document.getElementById('player-Two').addEventListener('click',function(){
+            // const playerTwo = Math.floor(Math.random() * 6) + 1;
+            // const playerTwoDice = `images/dice${playerTwo}.png`;
+            document.getElementById('check2').setAttribute('src',playerTwoDice);
+        });
+
+        document.getElementById('show-results').addEventListener('click',function(){
+            // document.write(playerOne);
+            if(playerOne > playerTwo){
+                document.querySelector('h1').innerHTML = "Player1 wins";
+            }
+            else if(playerOne < playerTwo){
+                document.querySelector('h1').innerHTML = "player2 wins";
+            }
+            else{
+                document.querySelector('h1').innerHTML = "draw";
+            }
+            });
+        
+          
+
+            
+        </script>
+        
+    </body>
+</html>

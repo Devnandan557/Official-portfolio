@@ -7,6 +7,7 @@
 }
 html{
     scroll-behavior: smooth;
+    background-image: linear-gradient(to right, rgb(14, 238, 189),rgb(49, 79, 251),rgb(65, 22, 206));
 }
 .navbar{
     /* background-color: crimson; */
@@ -62,7 +63,7 @@ html{
 }
 .home{
     display: flex;
-    background: url(photo.jpg) no-repeat center;
+    background: url(cert/photo.jpg) no-repeat center;
     height: 100vh;
     width: 100%;
     background-size: cover;
@@ -131,6 +132,7 @@ section{
 }
 .underline{
     text-decoration: underline;
+    color: crimson;
 }
 /* .about .title::before{
     content: "";
@@ -140,17 +142,6 @@ section{
     width: 180px;
     height: 3px;
     background: #111;
-    transform: translateX(-50%);
-} */
-/* .about .title::after{
-    content: "";
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    font-size: 20px;
-    color: crimson;
-    padding: 5px;
-    background: #fff;
     transform: translateX(-50%);
 } */
 .about .about-content .left img{
@@ -190,6 +181,9 @@ section{
 }
 .about .about-content .right p{
     text-align: justify;
+    font-size: 17px;
+    color: black;
+    font-weight: bolder;
 }
 .about .about-content .right a{
     display: inline-block;
@@ -211,14 +205,9 @@ section{
     color: #fff;
     background: #111;
 }
-/* .services .title::before{
-    background:#fff;
-}
-.services .title::after{
-    background: #111;
-    content: " ";
-} */
+
  .services .serv-content .card{ 
+    /* width: calc(30% - 10px); */
     width: calc(33% - 20px);
     background: #222;
     text-align: center;
@@ -226,11 +215,13 @@ section{
     padding: 20px 25px ;
     cursor: pointer;
 }
-.services .serv-content .card i{
+
+
+/* .services .serv-content .card i{
     font-size: 50px;
     color: crimson;
     transition: color 0.3s ease;
-}
+} */
 .services .serv-content .card .box{
     transition: all 0.3s ease;
 }
@@ -310,16 +301,19 @@ section{
     width: 90%;
 }
 .skills .skills-content .right .css::before{
-    width: 60%;
+    width: 80%;
 }
 .skills .skills-content .right .js::before{
-    width: 90%;
+    width: 80%;
+}
+.skills .skills-content .right .jq::before{
+    width: 80%;
 }
 .skills .skills-content .right .php::before{
-    width: 90%;
+    width: 50%;
 }
 .skills .skills-content .right .mysql::before{
-    width: 90%;
+    width: 70%;
 }
 /* teams styling */
 .teams .carousel .card{
@@ -383,22 +377,6 @@ section{
 .contact .contact-content .column{
     width: calc(50% - 30px);
 }
-.contact .contact-content .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.contact .contact-content .left p{
-    text-align: justify;
-}
-.contact .contact-content .left .icons{
-    margin:10px 0;
-}
-.contact .contact-content .row{
-    display: flex;
-    height: 65px;
-    align-items: center;
-}
 .contact .contact-content .row .info{
     margin-left: 30px;;
 }
@@ -412,37 +390,29 @@ section{
 .contact .contact-content .row .info .sub-title{
     color: #333;
 }
-/* .column{
-    /* display: inline-block; */
-    /* float: left;
-    justify-content: space-between;
-    /* margin-left: 50px; */
-    /* width: 100%; */
-/* }  */
-/* .contact .right form .fields{
-    display: flex;
-}
-.contact .right form .field,
-.contact .right form .fields .field{
-    height: 45px;
-    width: 100%;
-}
-.contact .right form .field input{
-    height: 100%;
-    width: 100%;
-} */
 .footer{
-	height:170px;
+	height:100%;
 	width: 100%;
+	min-height: 500px;
+}
+.last{
+    background: #111;
+    /* height: 500px; */
+}
+.foot{
+    /* margin-top: 10px; */
+    /* height: 100%; */
+    width: 100%;
+    max-height: 600px;
 }
 .fa {
-    padding: 20px;
+    padding: 10px;
     font-size: 30px;
     width: 30px;
     text-align: center;
     text-decoration: none;
-    margin: 7px 2px;
-    border-radius: 50%;
+    /* margin: 7px 0px 1px 0px; */
+    border-radius: 5px;
   }
   .fa:hover {
       opacity: 0.7;
@@ -479,10 +449,10 @@ section{
     justify-content: space-between;
 }  
 .phone-no{
-    margin: 5px 0 0 15px;
+    margin: 15px 0 0 35px;
 }
 .email{
-    margin: 5px 15px 0 0;
+    margin: 15px 35px 0 0;
 }
 .copy{
     background: #111;
@@ -514,18 +484,53 @@ section{
 .foot h2{
     margin-top: 40px;
 }
+.social-media{
+    margin: 15px 35px 0 0;
+}
+.more{
+    color: white;
+    background: crimson;
+    display: block;
+    border: 1px solid crimson;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 160px;
+    font-weight: bolder;
+}
+.more:hover{
+    background: white;
+    color: crimson;
+}
 
+.about .max-width .about-content img{
+    border:1px ;
+    /* background-image: linear-gradient(to right, #1b50e4,#073dd3ea,#042275ea); */
+}
+.about{
+    background-image: linear-gradient(to right, rgb(17, 177, 240),rgb(30, 149, 195),rgb(8, 113, 155) );
+}
+.skills{
+    background-image: linear-gradient(to right, rgb(251, 151, 19),rgb(231, 111, 14) )
+}
+/* .foot{
+    background:  linear-gradient(to left,rgb(177, 240, 6),rgb(86, 209, 14) );
+} */
 
-
-
-
-
-
-
-
-
+/* .teams{
+    background:  linear-gradient(to left,rgb(177, 240, 6),rgb(86, 209, 14) );
+} */
 
 /* Responsiveness */
+@media(max-width:576px){
+    .social-media{
+        margin-left: 35px;
+        }
+        .email{
+            margin-left: 35px;
+        }
+}
 @media (max-width:1104px){
     .home .max-width{
         margin-left: 0px;
@@ -642,5 +647,113 @@ section{
     }
     .home .home-content .text-3{
         font-size: 27px;
+    }
+}
+@media(max-width:324px){
+    .services .serv-content .card .box img{
+        width: 180px;
+        padding-right: 240px;
+    }
+    .services .serv-content .card .box .text{
+        font-size: 5px;
+    }
+}
+@media(max-width: 320px){
+    .home .max-width .home-content{
+        margin-left: -20px;
+        font-size: 12px;
+       
+    }
+    .services .serv-content .card .box img{
+        width: 160px;
+        padding-right: 180px;
+    }
+    .services .serv-content .card .box .text{
+        font-size: 5px;
+    }
+    .teams .carousel .card{
+        background: #222;
+        border-radius: 6px;
+        padding-right: 10px;
+        text-align: center;
+        transition: all 0.3s ease;
+        width: 100%;
+    }
+    .teams .carousel .card .box .text, .teams .carousel .card .box p{
+        font-size: 17px;
+    }
+    .teams .carousel .card .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    .teams .carousel .card img{
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-left: 0px;
+        margin-right: 13px;
+        border: 5px solid crimson;
+        transition: all 0.3s ease;
+    }
+}
+@media(max-width:336px){
+    .home .max-width .home-content{
+        margin-left: -9px;
+       
+    }
+    .services .serv-content .card .box img{
+        width: 250px;
+        padding-right: 160px;
+    }
+    .services .serv-content .card .box .text{
+        font-size: 15px;
+    }
+    
+    .services .serv-content .card text{
+        font-size: 5px;
+
+    }
+    .services .max-width .title .underline{ 
+        padding-left: 1px;
+        padding-right: 19px;
+        width: calc(33% - 20px);
+        /* background: #222; */
+        /* text-align: center; */
+        /* border-radius: 6px; */
+        /* right: 25px; */
+        /* padding: 20px 25px ; */
+        cursor: pointer;
+    }
+    
+    /* .services .serv-content .card{ 
+        width: calc(33% - 20px);
+        background: #222;
+        text-align: center;
+        border-radius: 6px;
+        padding: 20px 25px ;
+        cursor: pointer;
+    } */
+    
+}
+@media(min-width:337px) and (max-width:370px){
+    .services .serv-content .card .box img{
+        width: 250px;
+        padding-right: 70px;
+    }
+    .services .serv-content .card .box .text{
+        font-size: 15px;
+    }
+}
+@media(max-width:348px){
+    .services .serv-content .card .box img{
+        width: 250px;
+        padding-right: 90px;
+    }
+    .services .serv-content .card .box .text{
+        font-size: 15px;
     }
 }

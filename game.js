@@ -86,19 +86,19 @@ function checkForMatch(){
     const optionTwoId = cardsChosenId[1]   
     
 
-    if(optionOneId == optionTwoId) {
-        cards[optionOneId].setAttribute('src', 'images/blank.png')
-        cards[optionTwoId].setAttribute('src', 'images/blank.png')
-        alert('You have clicked the same item! Please click on a different item');
-    }
-    else if(cardsChosen[0] === cardsChosen[1]) // cardsChosen replaced by cardChosenId
+    // if(optionOneId == optionTwoId) {
+    //     cards[optionOneId].setAttribute('src', 'images/blank.png')
+    //     cards[optionTwoId].setAttribute('src', 'images/blank.png')
+    //     alert('You have clicked the same item! Please click on a different item');
+    // }
+     /*else*/ if(cardsChosen[0] === cardsChosen[1]) // c
     {
         alert('Congratulations! You  found a pair of matching items');
         cards[optionOneId].setAttribute('src', 'images/white.png')
         cards[optionTwoId].setAttribute('src', 'images/white.png')
         cards[optionOneId].removeEventListener('click', flipCard)
         cards[optionTwoId].removeEventListener('click', flipCard)
-        cardsWon.push(cardsChosen)
+        cardsWon.push(cardsChosen)   // to increment the score.
      }
     else
     {
@@ -113,9 +113,14 @@ resultDisplay.textContent = cardsWon.length
 
 if(cardsWon.length === cardArray.length/2) 
 {
-    resultDisplay.textContent = 'Congratulations! You found  all the items! and the game is over. Please reload the page, to start a new game.'
+    resultDisplay.textContent = 'Congratulations! You found all the items! and the game is over.Please reload the page, to start a new game.'
+    alert("congrats you completed this game in"+ dateValue);
+    // $(document).ready(function(){
+    //     $('.grid').hide();
+    // });
   }
 }
+  // resultDisplay.textContent = "he0"
 
 function flipCard(){
     var cardId = this.getAttribute('data-id');

@@ -15,14 +15,14 @@ $(document).ready(function(){
     //typing animation
 
     var typed = new Typed(".typing",{
-        strings:['blogger','Developer','Designer','Freelancer'],
+        strings:['blogger','Developer','Designer','Freelancer',"content writer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     })
 
     var typed = new Typed(".typing-2",{
-        strings:['blogger','Developer','Designer','Freelancer'],
+        strings:['blogger','Developer','Designer','Freelancer',"content writer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -49,4 +49,22 @@ $(document).ready(function(){
             }
         }
     });
+    document.getElementById('more').addEventListener("click", myfun);
+    function myfun(){
+        var hide = document.getElementById('hide');
+        var show = document.getElementById('show');
+        var more = document.getElementById('more');
+        if(hide.style.display === 'none'){
+            hide.style.display = "inline";
+            show.style.display = "none";
+            more.innerHTML = "Read More";
+        }
+        else{
+            hide.style.display = "none";
+            show.style.display = "inline";
+            more.innerHTML = "Read Less";
+        }
+    }
 });
+
+
